@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+    </head>
+    <body class="">
+		{{ if template !=  "templates/landing1"}}
+		<!-- This example requires Tailwind CSS v2.0+ -->
+		<header class="bg-indigo-600">
+		  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+			<div class="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
+			  <div class="flex items-center">
+				<a href="#">
+				  <span class="sr-only">Workflow</span>
+				  <img class="h-10 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="">
+				</a>
+				<div class="hidden ml-10 space-x-8 lg:block">
+					{{ nav:header }}
+						<a href="{{ url }}" class="text-base font-medium text-white hover:text-indigo-50" key="{{ title }}">
+							{{ title }}
+						</a>
+					{{ /nav:header }}
+				</div>
+			  </div>
+			  <div class="ml-10 space-x-4">
+				<a href="#" class="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">Sign in</a>
+				<a href="#" class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-indigo-600 hover:bg-indigo-50">Sign up</a>
+			  </div>
+			</div>
+			<div class="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
+				{{ nav:header }}
+					<a href="{{ url }}" class="text-base font-medium text-white hover:text-indigo-50" key="{{ title }}">
+						{{ title }}
+					</a>
+				{{ /nav:header }}
+			</div>
+		  </nav>
+		</header>
+		{{ /if }}
+
+        <div class="">
+            {{ template_content }}
+        </div>
+		
+        <script src="{{ mix src='/js/site.js' }}"></script>
+		<script src="//unpkg.com/alpinejs" defer></script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+title: 'Logo Cloud'
+fields:
+  -
+    handle: cloud_text
+    field:
+      input_type: text
+      antlers: false
+      display: 'Cloud Text'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: replicator
+    field:
+      collapse: false
+      sets:
+        logo_cloud:
+          display: 'logo cloud'
+          fields:
+            -
+              handle: image
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: link
+              field:
+                display: Link
+                type: link
+                icon: link
+                listable: hidden
+      display: Replicator
+      type: replicator
+      icon: replicator
+      listable: hidden

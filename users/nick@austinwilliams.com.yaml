@@ -1,0 +1,8 @@
+name: 'Nick Basil'
+super: true
+id: 2938b42f-b59a-462b-b2dc-c19e88eb570e
+password_hash: $2y$10$23ZM2yy2tjKLBjq4gXJjteIwQU0oNK0mb1Lt.0b2U2cCOD2z61lv6
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
